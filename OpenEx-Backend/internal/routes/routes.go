@@ -79,6 +79,11 @@ func SetupRouter() *gin.Engine {
 		auth.GET("/favorites", handlers.ListFavorites)
 		auth.GET("/favorites/check/:id", handlers.CheckFavoriteStatus)
 
+		// Orders history route
+		auth.GET("/orders/history", handlers.GetBuyerOrderHistory)
+
+		// Contact check route
+		auth.GET("/check-contact", handlers.CheckContactDetails)
 	}
 
 	// Admin routes
