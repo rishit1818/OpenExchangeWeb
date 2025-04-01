@@ -145,8 +145,8 @@ const Navbar = () => {
 
   // Instead of just strings, each item is now an object with `label` and `path`.
   const categories = [
-    { label: 'MEN', path: '/men' },
-    { label: 'WOMEN', path: '/women' },
+    { label: 'BUY', path: './pages/BuyRequests' },
+    { label: 'SELL', path: '/app/sell' },
     { label: 'HOME', path: '/app/home' },
     { label: 'BEAUTY BY TIRA', path: '/beauty-by-tira' },
     { label: 'THE EDIT', path: '/the-edit' },
@@ -262,14 +262,18 @@ const Navbar = () => {
       {/* Main Navbar */}
       <div className="bg-white  px-4 flex justify-between items-center">
         {/* Logo */}
-        <div className="pr-1.5">
+        <div className="pr-1.5"
+        onClick={()=> navigate('/app/home')}
+        >
           <img
             src={HostelLogo}
             alt="Logo"
             className="h-20 pb-1 object-contain"
           />
         </div>
-        <div className="flex-1">
+        <div className="flex-1"
+        onClick={()=> navigate('/app/home')}
+        >
           <img
             src={Logo}
             alt="Logo"

@@ -6,7 +6,7 @@ const Feedback = () => {
   const [formData, setFormData] = useState({
     subject: '',
     message: '',
-    rating: 5,
+    rating: 0,
     category: 'general',
     contact_back: false
     // Removed name and email fields
@@ -67,16 +67,16 @@ const Feedback = () => {
           <p className="text-gray-600">We'd love to hear your thoughts about the platform!</p>
         </div>
         
-        {/* Anonymous Badge */}
-        <div className="bg-blue-50 border border-blue-100 rounded-lg p-4 mb-6 flex items-center">
+        {/* Anonymous Badge
+        <div className="bg-blue-50 border border-blue-100 rounded-xs p-4 mb-6 flex items-center">
           <Shield className="h-6 w-6 text-blue-500 mr-2" />
           <div>
             <p className="text-blue-800 font-medium">100% Anonymous Feedback</p>
             <p className="text-blue-600 text-sm">Your feedback is completely anonymous. We don't collect any personal information.</p>
           </div>
-        </div>
+        </div> */}
         
-        <div className="bg-white shadow-xl rounded-lg overflow-hidden">
+        <div className="bg-white shadow-xl rounded-xs overflow-hidden">
           {success ? (
             <div className="p-8 text-center">
               <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
@@ -86,7 +86,7 @@ const Feedback = () => {
               </p>
               <button
                 onClick={() => setSuccess(false)}
-                className="bg-black hover:bg-gray-900 text-white font-medium px-6 py-3 rounded-none transition duration-200"
+                className="bg-black hover:bg-gray-900 text-white font-medium px-6 py-3 rounded-xs transition duration-200"
               >
                 Submit Another Feedback
               </button>
@@ -94,7 +94,7 @@ const Feedback = () => {
           ) : (
             <div className="p-8">
               {error && (
-                <div className="mb-6 p-4 bg-red-50 border-l-4 border-red-500 rounded-md">
+                <div className="mb-6 p-4 bg-red-50 border-l-4 border-red-500 rounded-xs">
                   <div className="flex">
                     <AlertCircle className="h-5 w-5 text-red-500 mr-2" />
                     <p className="text-sm text-red-700">{error}</p>
@@ -108,7 +108,7 @@ const Feedback = () => {
                     Subject <span className="text-red-500">*</span>
                   </label>
                   <input
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200"
+                    className="w-full px-4 py-3 rounded-xs border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200"
                     id="subject"
                     name="subject"
                     type="text"
@@ -120,11 +120,11 @@ const Feedback = () => {
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="category">
+                  <label className="block text-sm font-medium text-gray-700 mb-2 " htmlFor="category">
                     Category <span className="text-red-500">*</span>
                   </label>
                   <select
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200"
+                    className="w-full px-4 py-3 rounded-xs border  py-2.5 border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200"
                     id="category"
                     name="category"
                     value={formData.category}
@@ -167,7 +167,7 @@ const Feedback = () => {
                     Message <span className="text-red-500">*</span>
                   </label>
                   <textarea
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200 min-h-[150px]"
+                    className="w-full px-4 py-3 rounded-xs border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200 min-h-[150px]"
                     id="message"
                     name="message"
                     value={formData.message}
@@ -179,7 +179,7 @@ const Feedback = () => {
                 
                 <div className="flex items-center justify-end">
                   <button
-                    className="bg-black hover:bg-black text-white font-medium px-6 py-3 rounded-none transition duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50"
+                    className="bg-black hover:bg-black text-white font-medium px-6 py-3 rounded-xs transition duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50"
                     type="submit"
                     disabled={loading}
                   >

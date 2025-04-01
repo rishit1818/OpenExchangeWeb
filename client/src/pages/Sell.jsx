@@ -107,11 +107,13 @@ const Sell = () => {
               <Shield className="w-12 h-12 mb-6 text-white group-hover:scale-110 transition-transform" />
               <h3 className="text-xl font-bold mb-4 text-white">Secure Transactions</h3>
               <p className="text-gray-300">
-                Our platform ensures safe and transparent transactions.
+                Our platform ensures safe and transparent deals.
               </p>
             </div>
-
-            <div className="bg-black p-8 rounded-xl border border-gray-900 hover:border-gray-800 transition-all group">
+            <div 
+              className="bg-black p-8 rounded-xl border border-gray-900 hover:border-gray-800 transition-all group cursor-pointer"
+              onClick={() => navigate('/app/feedback')}
+            >
               <Clock className="w-12 h-12 mb-6 text-white group-hover:scale-110 transition-transform" />
               <h3 className="text-xl font-bold mb-4 text-white">24/7 Support</h3>
               <p className="text-gray-300">
